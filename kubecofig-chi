@@ -1,0 +1,29 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJSVhodWxaYlhEQUV3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TkRBek1qa3dPVEV3TXpSYUZ3MHpOREF6TWpjd09URTFNelJhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURhRmwwVGRoVDlndFo0QS8yTmN5V3U4dUViTDlLUFdrUVdnaTJXNEZVN3FETVJQRGlNTGhPZHI3dkwKNU84by9JSHR2TDNaYzNRcDB1K2dhQStEQmErdUxZUFlCT2U5ZTVYWjUvR0hzYVNETHowczdiVjNRYWx6TjJlYwozQmQ2ckxHQTc0ZjljSU1kbGE3a05Sd29NV3huYW1yMittQ1NSYXNWSldqR28xdzhGblFVVUlqV2ZxMzNPMFhKCnhJU1JIeUhtWndLSzVaMmZqOFpzK3F1WnpIR3NCZDBZV1ZKcjY4K3cxTGJsWk5oRW1jS2RoSUJBRHoyOVEzT2oKMllndytkZC8weXFPUW1PWDJpRzloZ08zTHcvakg3U1FNT01xWWJ6UTl3MXB2V3lYWk5NeE1HdFN0T3VUQmNTegplelVwTlEvT3JsZGx2bHNwb1lqa0I1aW1lK3dMQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRTEg5a2tyRnhoNy9aeXdIa3F6a0J0a2UrY0ZEQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQUdWaElZeWpteApVbk1zWERnM3ZQU1RVcDA5U3FNL2k5WDY4SlJlYkNyMUp0MDEwZ3BOMzZUcDYydU1VeGkxdkdMV0FzcXd5OGY3CjBVYkh2T2w1cVpuVG44QmhHZnRvTUJYY29MeXgwT1RQSEthc2hDcXNsR1VOcGg1TGVLaVZ2QjFPNUxxamlOUDMKRlFMZjF4WVhIa0Z5LzlrekxXUnBtVnlqTkszVThNM0JGTEtZRytSZFVvVmdOQStWWkxkbkVPUFl1dTFSS0JFVAp6TVM5KzdHRE9VUzA5VmlzdGJEVUdyckVOc2p6U0NEZExzMDhVMDRlV0RSZmkrR3F6cGRScGtoaHRIVmJxSUZrCnEybURzMUVDMVlxT21ucEZ2ZnEzaWRiR3pKQVhsSWUwbDJzR0p5ZTFqMmRXVUJmOVlPbUlSMnN1UUQvSDQxMUQKK2dibEZmWmZBSEs5Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://C0903E7518DB10698BD3C634E58C01C2.gr7.ap-northeast-2.eks.amazonaws.com
+  name: arn:aws:eks:ap-northeast-2:197780904448:cluster/chitest-clusterr
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-northeast-2:197780904448:cluster/chitest-clusterr
+    user: arn:aws:eks:ap-northeast-2:197780904448:cluster/chitest-clusterr
+  name: arn:aws:eks:ap-northeast-2:197780904448:cluster/chitest-clusterr
+current-context: arn:aws:eks:ap-northeast-2:197780904448:cluster/chitest-clusterr
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-northeast-2:197780904448:cluster/chitest-clusterr
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - ap-northeast-2
+      - eks
+      - get-token
+      - --cluster-name
+      - chitest-clusterr
+      - --output
+      - json
+      command: aws
